@@ -79,13 +79,42 @@
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-WU-enY">
+                                <rect key="frame" x="21" y="662.33333333333337" width="372.66666666666669" height="73.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT3-RM-Y9H">
+                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="33"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="VIEW AS TABLEVIEW">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tableViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9R8-HB-gWi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giO-Fc-22U">
+                                        <rect key="frame" x="0.0" y="41" width="372.66666666666669" height="32.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="VIEW AS COLLECTIONVIEW">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="collectionViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y7W-se-7aE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1sU-WU-enY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0B0-fq-wQM"/>
                             <constraint firstItem="Dwb-pZ-IdR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.9" id="Gin-iq-Vs5"/>
                             <constraint firstItem="Dwb-pZ-IdR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LcS-Vi-xcT"/>
                             <constraint firstItem="Dwb-pZ-IdR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="YwI-0B-kJj"/>
+                            <constraint firstItem="1sU-WU-enY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dTO-bL-SAX"/>
                             <constraint firstItem="Dwb-pZ-IdR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="e37-QR-But"/>
+                            <constraint firstItem="1sU-WU-enY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="iXR-om-64h"/>
+                            <constraint firstItem="1sU-WU-enY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="yiW-hR-RxH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -102,7 +131,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="-94"/>
+            <point key="canvasLocation" x="-93" y="-95"/>
+        </scene>
+        <!--Tune Table View Controller-->
+        <scene sceneID="qZr-x3-gvu">
+            <objects>
+                <tableViewController storyboardIdentifier="tableViewController" id="SQU-Cn-bju" customClass="ITuneTableViewController" customModule="JSON" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OMS-yv-YBh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tCell" id="eph-q3-1zV">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eph-q3-1zV" id="TP3-80-3ZQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SQU-Cn-bju" id="cRC-AP-HYm"/>
+                            <outlet property="delegate" destination="SQU-Cn-bju" id="O5O-3S-8KK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6I-sg-mwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="-95"/>
         </scene>
     </scenes>
 </document>

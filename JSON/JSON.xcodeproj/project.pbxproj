@@ -13,6 +13,8 @@
 		042AC5B7209DA9BC00AD703C /* JSON.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 042AC5B5209DA9BC00AD703C /* JSON.xcdatamodeld */; };
 		042AC5B9209DA9BC00AD703C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042AC5B8209DA9BC00AD703C /* Assets.xcassets */; };
 		042AC5BC209DA9BC00AD703C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042AC5BA209DA9BC00AD703C /* LaunchScreen.storyboard */; };
+		042AC5C4209DD20B00AD703C /* ITuneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AC5C3209DD20B00AD703C /* ITuneTableViewController.swift */; };
+		042AC5C6209DD21D00AD703C /* ITuneCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AC5C5209DD21D00AD703C /* ITuneCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		042AC5B8209DA9BC00AD703C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042AC5BB209DA9BC00AD703C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042AC5BD209DA9BC00AD703C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042AC5C3209DD20B00AD703C /* ITuneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITuneTableViewController.swift; sourceTree = "<group>"; };
+		042AC5C5209DD21D00AD703C /* ITuneCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITuneCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				042AC5AE209DA9BC00AD703C /* AppDelegate.swift */,
-				042AC5B0209DA9BC00AD703C /* ViewController.swift */,
 				042AC5B2209DA9BC00AD703C /* Main.storyboard */,
+				042AC5B0209DA9BC00AD703C /* ViewController.swift */,
+				042AC5C3209DD20B00AD703C /* ITuneTableViewController.swift */,
+				042AC5C5209DD21D00AD703C /* ITuneCollectionViewController.swift */,
 				042AC5B8209DA9BC00AD703C /* Assets.xcassets */,
 				042AC5BA209DA9BC00AD703C /* LaunchScreen.storyboard */,
 				042AC5BD209DA9BC00AD703C /* Info.plist */,
@@ -140,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				042AC5B1209DA9BC00AD703C /* ViewController.swift in Sources */,
+				042AC5C6209DD21D00AD703C /* ITuneCollectionViewController.swift in Sources */,
+				042AC5C4209DD20B00AD703C /* ITuneTableViewController.swift in Sources */,
 				042AC5B7209DA9BC00AD703C /* JSON.xcdatamodeld in Sources */,
 				042AC5AF209DA9BC00AD703C /* AppDelegate.swift in Sources */,
 			);

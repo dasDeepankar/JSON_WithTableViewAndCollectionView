@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    
+    var dataTask = URLSessionDataTask()
+    var urlSession = URLSession(configuration: URLSessionConfiguration.default)
+    
  
     @IBOutlet weak var imgV1: UIImageView!
     @IBOutlet weak var imgV2: UIImageView!
@@ -38,9 +43,39 @@ class ViewController: UIViewController {
     }
     
     
+    
+    func jsonLoad() {
+        
+        
+        var urlReq = URLRequest(url: URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/hot-tracks/all/10/explicit.json")!)
+        urlReq.httpMethod = "GET"
+        
+        
+        self.dataTask = self.urlSession.dataTask(with: urlReq, completionHandler: { (data, res, err) in
+            
+            print(data)
+        })
+        
+        self.dataTask.resume()
+        
+        
+    }
    
+    @IBAction func tableViewButton(_ sender: UIButton) {
+        
+        jsonLoad()
+        let SB = UIStoryboard.init(name: "Main", bundle: nil)
+        
+        let sendController = SB.instantiateViewController(withIdentifier:"tableViewController" ) as! ITuneTableViewController
+        
+        present(sendController, animated: true, completion: nil)
+        
+        
+    }
     
     
+    @IBAction func collectionViewButton(_ sender: UIButton) {
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
