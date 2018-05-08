@@ -10,9 +10,12 @@ import UIKit
 
 class ITuneTableViewController: UITableViewController {
 
+    var pri = [String:Any]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(pri)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
